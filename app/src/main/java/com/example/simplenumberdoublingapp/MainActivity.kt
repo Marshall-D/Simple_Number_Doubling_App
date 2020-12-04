@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             val textValue: TextView = findViewById(R.id.textview_value)
             val stringValue: String = textValue.text.toString()
+
             val originalNumber: Int = Integer.parseInt(stringValue)
             val newValue: Int = MyWorker.doubleTheValue(originalNumber)
             textValue.text = Integer.toString(newValue)
